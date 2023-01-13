@@ -1,11 +1,17 @@
 /* ======= Propiedades Custom =======*/
 :root {
-  --first-color: #d90062;
-  --first-alpha-color: rgba(217, 0, 98, 0.75);
-  --second-color: #14192d;
-  --second-alpha-color: rgba(20, 25, 45, 0.75);
-  --third-color: #501464;
-  --third-alpha-color: rgba(80, 20, 100, 0.75);
+  /* --first-color: #d90062; */
+  --first-color: #2a9d8f;
+  /* --first-alpha-color: rgba(217, 0, 98, 0.75); */
+  --first-alpha-color: rgba(42, 157, 143, 0.75);
+  /* --second-color: #14192d; */
+  --second-color: #264653;
+  /* --second-alpha-color: rgba(20, 25, 45, 0.75); */
+  --second-alpha-color: rgba(38, 70, 83, 0.75);
+  /* --third-color: #501464; */
+  --third-color: #e9c46a;
+  /* --third-alpha-color: rgba(80, 20, 100, 0.75); */
+  --third-alpha-color: rgba(233, 196, 106, 0.75);
   --white-color: #fff;
   --gray-light-color: #f3f3f3;
   --gray-color: #ccc;
@@ -563,18 +569,22 @@ progress::-webkit-progress-value {
 .contact-card > svg {
   width: 2rem;
   height: 2rem;
-  fill: var(--first-color);
+  fill: var(--first-color) !important;
 }
 
 .contact-card > small {
   margin-top: -1rem;
 }
 
+.contact-card > small > a {
+  text-decoration: none;
+}
+
 .footer {
   margin-bottom: var(--header-height);
   padding: 0.5rem;
   text-align: center;
-  color: var(--white-color);
+  color: var(--black-color);
   background-color: var(--third-color);
 }
 
