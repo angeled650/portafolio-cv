@@ -134,7 +134,7 @@ p {
   /* animation: carousel-slide 12s ease-in-out 3s; */
 }
 
-#testimonios:target .carousel .slides {
+.carousel .slides.active {
   animation: carousel-slide 12s ease-in-out 2s;
 }
 
@@ -605,6 +605,26 @@ progress::-webkit-progress-value {
   align-items: center;
 }
 
+.languages {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.language-card {
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.language-card h3 {
+  color: var(--title-color);
+  text-align: center;
+}
+
+.language-card > svg {
+  width: 6rem;
+  height: 6rem;
+}
+
 .logo a {
   color: var(--first-color);
   font-weight: bold;
@@ -676,6 +696,10 @@ progress::-webkit-progress-value {
   color: var(--first-color);
 }
 
+.section-title.lang {
+  width: 268px;
+}
+
 .service-card {
   margin: 1rem auto;
   padding: 1rem;
@@ -716,6 +740,18 @@ progress::-webkit-progress-value {
     margin-bottom: 0;
   }
 
+  .languages {
+    display: flex;
+    justify-content: center;
+    gap: 4.5rem;
+  }
+
+  .language-card {
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+  }
+
   .portfolio > .container {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -742,7 +778,8 @@ progress::-webkit-progress-value {
     align-content: center;
   }
 
-  .services .section-title {
+  .services .section-title,
+  .languages {
     grid-column: span 2;
   }
 }

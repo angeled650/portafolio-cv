@@ -92,3 +92,30 @@
 
   d.addEventListener("DOMContentLoaded", validarForm);
 })(document);
+
+/* ======= Animación Carrusel =======*/
+((d) => {
+  const $testimonios = d.getElementById("testimonios"),
+    $slides = d.querySelector(".carousel .slides");
+
+  const cb = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        $slides.classList.add("active");
+      } else {
+        $slides.classList.remove("active");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(cb, {
+    threshold: [0.5, 0.75],
+  });
+
+  observer.observe($testimonios);
+
+  d.addEventListener("click", (e) => {
+    if (e.target.matches(".slides-nav label"))
+      $slides.classList.remove("active");
+  });
+})(document);
